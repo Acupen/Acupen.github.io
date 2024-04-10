@@ -15,6 +15,11 @@ export default defineConfig({
         activeMatch: '/package/test',
       },
       {
+        text: '八股文',
+        link: '/stereotyped-writing/html',
+        activeMatch: '/stereotyped-writing/html',
+      },
+      {
         text: '阅读记录',
         items: [{ text: 'vue.js设计与实现', link: '/read-note' }],
       },
@@ -43,8 +48,25 @@ export default defineConfig({
           },
         ],
       },
+      '/stereotyped-writing/': {
+        base: '/stereotyped-writing/',
+        items: [
+          {
+            text: '看看就好',
+            collapsed: false,
+            items: [
+              { text: 'html', link: 'html' },
+              { text: 'css', link: 'css' },
+              { text: 'js', link: 'js' },
+            ],
+          },
+        ],
+      },
     },
-
+    outline: {
+      label: '页面导航',
+      level: [1, 4],
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Acupen/Acupen.github.io' },
     ],
