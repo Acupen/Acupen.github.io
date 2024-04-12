@@ -1,8 +1,9 @@
 import { defineConfig } from 'vitepress';
 
+import sidebar from '../sidebar';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'My Blog',
+  title: 'Noctis',
   description: 'create blog by vitePress ',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -15,54 +16,18 @@ export default defineConfig({
         activeMatch: '/package/test',
       },
       {
-        text: '八股文',
-        link: '/stereotyped-writing/html',
-        activeMatch: '/stereotyped-writing/html',
+        text: '面试',
+        items: [
+          { text: '八股文', link: '/stereotyped-writing/html' },
+          { text: '面试记录', link: '/interview-record/4-12' },
+        ],
       },
       {
         text: '阅读记录',
         items: [{ text: 'vue.js设计与实现', link: '/read-note' }],
       },
     ],
-
-    // sidebar: [
-    //   {
-    //     text: 'Examples',
-    //     items: [
-    //       { text: 'Markdown Examples', link: '/markdown-examples' },
-    //       { text: 'Runtime API Examples', link: '/api-examples' }
-    //     ]
-    //   }
-    // ],
-    sidebar: {
-      '/package/test/': {
-        base: '/package/test/',
-        items: [
-          {
-            text: '简介',
-            collapsed: false,
-            items: [
-              { text: '快速开始', link: 'test copy' },
-              { text: '什么是 VitePress？', link: 'test' },
-            ],
-          },
-        ],
-      },
-      '/stereotyped-writing/': {
-        base: '/stereotyped-writing/',
-        items: [
-          {
-            text: '看看就好',
-            collapsed: false,
-            items: [
-              { text: 'html', link: 'html' },
-              { text: 'css', link: 'css' },
-              { text: 'js', link: 'js' },
-            ],
-          },
-        ],
-      },
-    },
+    sidebar,
     outline: {
       label: '页面导航',
       level: [1, 4],
