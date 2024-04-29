@@ -14,7 +14,7 @@ hero:
       text: API Examples
       link: /api-examples
   image:
-        src: /bg.jpg
+        src: 'public/noctis.png'
         alt: Noctis
 features:
   # - title: Feature A
